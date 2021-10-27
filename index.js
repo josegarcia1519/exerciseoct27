@@ -7,7 +7,7 @@ for (let i = 0; i < numbers.length; i++) {
 }
 // Q: What is the time complexity of the for loop?
 // ANSWER:
-
+O(1) constant
 
 // 1.2) You are challenged to find the 4th element of the array, and you came up with this solution:
 
@@ -24,12 +24,19 @@ for (let i = 0; i < numbers.length; i++) {
 }
 // Q: What is the time complexity of of this solution?
 // ANSWER:
+linear
 
 
 // Q: Could you come up with a solution that has a better time complexity? If so, what is that time complexity?
 // ANSWER:
-
-
+for (let i = 0; i < numbers.length; i++) {
+  if(i=== 3){
+  answer = numbers[i]
+  return answer}
+  else
+  { answer += 1 }
+}
+this will be constant
 // 2) -------------------------------------------------------
 function printA() {
     for (let i = 0; i < 5; i++) {
@@ -37,7 +44,7 @@ function printA() {
     }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: constant
 
 
 // 3) -------------------------------------------------------
@@ -47,7 +54,8 @@ function printB(number) {
   }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: linear
+
 
 
 // 4) -------------------------------------------------------
@@ -59,7 +67,7 @@ function printC(num, arr) {
   }
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: quadratic
 
 
 // 5) -------------------------------------------------------
@@ -69,7 +77,7 @@ for (let i = 0; i < numbers.length; i++) {
   }
 }
 // Q: What is the time complexity of the nested for loop?
-// ANSWER:
+// ANSWER: quadratic
 
 
 // 6) -------------------------------------------------------
@@ -77,7 +85,7 @@ let newNumbersA = numbers.filter((num) => {
   return num < 5
 })
 // Q: What is the time complexity of the filter higher-order function?
-// ANSWER:
+// ANSWER: linear
 
 
 // 7) -------------------------------------------------------
@@ -85,7 +93,7 @@ let newNumbersB = numbers.map((num) => {
   return num * 3
 })
 // Q: What is the time complexity of the map higher-order function?
-// ANSWER:
+// ANSWER: linear
 
 
 // 8) -------------------------------------------------------
@@ -93,7 +101,7 @@ function removeNum() {
     numbers.splice(3,1)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: linear
 
 
 // 9) -------------------------------------------------------
@@ -101,7 +109,7 @@ function insertNum() {
     numbers.splice(3, 0, 19)
 }
 // Q: What is the time complexity of the function?
-// ANSWER:
+// ANSWER: linear
 
 
 // 10) -------------------------------------------------------
@@ -110,7 +118,7 @@ function pushNum() {
 }
 // Q: What is the time complexity of the function?
 // ANSWER:
-
+O(1) constant
 
 // 11) -------------------------------------------------------
 // Given an array of names....
@@ -120,7 +128,7 @@ function printFirstTwoNames(array) {
 }
 
 // Q: What is the time complexity of the function? Could we write this function differently to accomplish the goal of the function in a faster time complexity?
-// ANSWER:
+// ANSWER:O(1) constant.  constant is the fastest, no other option
 
 
 // Advanced Challenges
@@ -132,10 +140,14 @@ function printFirstTwoNames(array) {
 
 //For example, if we run 9119 through the function, 811181 will come out, because 9^2 is 81, 1^2 is 1, 1^2 is 1, and 9^2 is 81. Together, we have 81, 1, 1, 81. Once combined we have 811181.
 
+}
 
 // Starting Code:
 function squareEveryDigit(number) {
+  
+    return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
     
-}
-
 squareEveryDigit(946) // When running 946, you should see a result of 811636
+
+
+time complexity is O(1) constant
